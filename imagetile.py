@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-'''Create a large image by multiplying a source image:
+'''Create a large image by tiling a source image:
 
-    imagemultiply.py source_file.jpg 3
+    imagetile.py source_file.jpg 3
 
     outputs: source_file_x3.jpg (3 x 3 grid of the source image, copied)
 '''
@@ -15,7 +15,7 @@ from PIL import Image
 
 def main():
     if len(sys.argv) < 2:
-        print "Usage: imagemultiply.py source_image_path multiplier"
+        print "Usage: imagetile.py source_image_path multiplier"
         exit(0)
     else:
         source_image_path = sys.argv[1]
