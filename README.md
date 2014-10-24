@@ -14,7 +14,7 @@ PIL fork Pillow.
 
 ## Setup on Python 3.4 and higher
 
-1. Change to the script directory.
+1. Change to the directory containing imagetile.py.
 
 2. Create a virtual environment: `pyvenv-3.4 env`
 
@@ -23,18 +23,22 @@ PIL fork Pillow.
 4. Install the required packages: `pip install -r requirements.txt`
 
 
-## Setup on Python 2.7
+## Setup on Python 2.7 through 3.3
 
-1. Ensure you have virtualenv and virtualenvwrapper installed.
+1. Ensure you have virtualenv installed: `virtualenv`
 
-2. Create and activate a virtual environment: `mkvirtualenv it_env`.
+2. Change to the directory containing imagetile.py.
 
-3. Install the required packages: `pip install -r requirements.txt`
+3. Create a virtual environment: `virtualenv env2`
+
+4. Activate the environment: `source env2/bin/activate`
+
+5. Install the required packages: `pip install -r requirements.txt`
 
 
 ## Running the script
 
-Enter: `python imagetile.py {source\path\file} {multiplier}`
+Enter: `python imagetile.py {source/path/file} {multiplier}`
 
 Example: `python imagetile.py mytestfile.jpg 3`
 
