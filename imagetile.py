@@ -15,7 +15,7 @@ from PIL import Image
 
 def main():
     if len(sys.argv) < 2:
-        print "Usage: imagetile.py source_image_path multiplier"
+        print('Usage: imagetile.py source_image_path multiplier')
         exit(0)
     else:
         source_image_path = sys.argv[1]
@@ -38,7 +38,7 @@ def main():
 
         output_image.save(output_image_path)
 
-        print 'Done.'
+        print('Done.')
 
 
 if __name__ == '__main__':
