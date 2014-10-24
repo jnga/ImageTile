@@ -4,7 +4,7 @@
 
     Run as a script at the command line:
 
-    imagetile.py source_file.jpg 3
+    imagetile.py my_dir/source_file.jpg 3
 
     output: source_file_x3.jpg (3 x 3 grid of the source image, copied)
 

@@ -38,7 +38,7 @@ It relies on the Python Imaging Library (PIL) supplied by the PIL fork Pillow.
 
 Enter: `python imagetile.py {source/path/file} {multiplier}`
 
-Example: `python imagetile.py mytestfile.jpg 3`
+Example: `python imagetile.py my_dir/mytestfile.jpg 3`
 
 The tiled image is saved to the same directory, with a filename based on
 the original appended with _x{multiplier}.
