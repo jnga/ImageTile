@@ -4,11 +4,13 @@ ImageTile is a Python script that takes an image file and tiles it in order
 to create a larger file.
 
 It was written to help test web applications that allow uploading images.
-The goal was to approximate images taken with digital cameras of varying
+The goal was to approximate files of sizes from digital cameras of varying
 megapixel specifications.
 
-The script originally ran on Python 2.7 and is now also known to work with
-Python 3.4.
+The script runs on Python 3 and Python 2, having been tested on versions
+3.4 and 2.7. It relies on the Python Imaging Library (PIL) supplied by the
+PIL fork Pillow.
+
 
 ## Setup on Python 3.4 and higher
 
@@ -18,8 +20,25 @@ Python 3.4.
 
 3. Activate the environment: `source env/bin/activate`
 
-4. Install the required libraries: `pip install -r requirements.txt`
+4. Install the required packages: `pip install -r requirements.txt`
 
-5. Run the script: `python imagetile.py {source\path\file} {multiplier}`
 
-Example: `python imagetile.py mytestfile.png 3`
+## Setup on Python 2.7
+
+1. Ensure you have virtualenv and virtualenvwrapper installed.
+
+2. Create and activate a virtual environment: `mkvirtualenv it_env`.
+
+3. Install the required packages: `pip install -r requirements.txt`
+
+
+## Running the script
+
+Enter: `python imagetile.py {source\path\file} {multiplier}`
+
+Example: `python imagetile.py mytestfile.jpg 3`
+
+The tiled image is saved to the same directory, with a filename based on
+the original appended with _x{multiplier}.
+
+Example output: `Done: saved mytestfile_x3.jpg`

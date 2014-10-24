@@ -38,7 +38,7 @@ def main():
 
         output_image.save(output_image_path)
 
-        print('Done.')
+        print('Done: saved {0}'.format(output_image_path))
 
 
 if __name__ == '__main__':
