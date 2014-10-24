@@ -4,7 +4,7 @@
 
     Run as a script at the command line:
 
-    imagetile.py my_dir/source_file.jpg 3
+    python imagetile.py my_dir/source_file.jpg 3
 
     output: source_file_x3.jpg (3 x 3 grid of the source image, copied)
 
@@ -44,7 +44,7 @@ def tile_image(source_image_path, multiplier):
 
 def main():
     if len(sys.argv) < 2:
-        print('Usage: imagetile.py source_image_path multiplier')
+        print('Usage: python imagetile.py source_image_path multiplier')
         exit(0)
     else:
         source_image_path = sys.argv[1]
