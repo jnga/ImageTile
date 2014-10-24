@@ -9,6 +9,8 @@ megapixel specifications.
 It runs on Python 3 and Python 2, having been tested on versions 3.4 and 2.7.
 It relies on the Python Imaging Library (PIL) supplied by the PIL fork Pillow.
 
+This project is licensed under the terms of the MIT License.
+
 
 ## Setup on Python 3.4 and higher
 
