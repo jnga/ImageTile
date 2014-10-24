@@ -27,7 +27,7 @@ def main():
         (width, height) = source_image.size
 
         # Create a new image with the requested multiplied size.
-        output_image = Image.new('RGB',
+        output_image = Image.new('RGBA',
             (width * multiplier, height * multiplier))
 
         # Paste the source image multiple times into the new output image.
