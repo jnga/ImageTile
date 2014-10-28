@@ -58,3 +58,11 @@ Example:
 	
 	output_image = tile_image(source_image_path, 3)
 	output_image.save(output_image_path)
+	
+
+## Running the tests
+
+All tests: `python test_imagetile.py`
+
+A single test: 
+`python test_imagetile.py TestImageTile.{test_function_name}`

@@ -26,18 +26,19 @@ from PIL import Image
 
 def tile_image(source_image_path, multiplier):
     """Tile a source image multiple times, returning a larger image."""
-    source_image = Image.open(source_image_path)
-    (width, height) = source_image.size
+    
+    with Image.open(source_image_path) as source_image:
+        (width, height) = source_image.size
 
-    # Create a new image with the requested multiplied size.
-    output_image = Image.new('RGBA',
-        (width * multiplier, height * multiplier))
+        # Create a new image with the requested multiplied size.
+        output_image = Image.new('RGBA',
+            (width * multiplier, height * multiplier))
 
-    # Paste the source image multiple times into the new output image.
-    for row in range(0, multiplier):
-        for col in range(0, multiplier):
-            box = (col * width, row * height)
-            output_image.paste(source_image, box)
+        # Paste the source image multiple times into the new output image.
+        for row in range(0, multiplier):
+            for col in range(0, multiplier):
+                box = (col * width, row * height)
+                output_image.paste(source_image, box)
 
     return output_image
 
