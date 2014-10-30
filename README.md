@@ -47,7 +47,7 @@ Example: `python imagetile.py my_dir/mytestfile.jpg 3`
 The tiled image is saved to the same directory, with a filename based on
 the original appended with _x{multiplier}.
 
-Example output: `Done: saved mytestfile_x3.jpg`
+Example output message: `Done: saved mytestfile_x3.jpg`
 
 
 ## Using from a program
