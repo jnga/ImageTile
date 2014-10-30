@@ -1,13 +1,15 @@
 # ImageTile
 
-ImageTile takes an image file and tiles it in order to make a larger file.
+ImageTile is a routine that tiles an image in order to make a larger
+one.
 
-It was written to help test web applications that allow uploading images.
-The goal was to approximate image files from digital cameras of varying
-megapixel specifications.
+It was written to help test web applications that allow uploading
+images. The goal was to make image files similar in size to ones from
+higher megapixel digital cameras.
 
-It runs on Python 3 and Python 2, having been tested on versions 3.4 and 2.7.
-It relies on the Python Imaging Library (PIL) supplied by the PIL fork Pillow.
+It runs on Python, either as a script or from a program. It has been
+tested on Python versions 3.4 and 2.7. It relies on the Python Imaging
+Library (PIL) fork Pillow.
 
 This project is licensed under the terms of the MIT License.
 
