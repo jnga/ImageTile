@@ -1,6 +1,6 @@
 # ImageTile
 
-ImageTile is a routine that tiles an image in order to make a larger
+ImageTile is a routine that tiles an image file in order to make a larger
 one.
 
 It was written to help test web applications that allow uploading
