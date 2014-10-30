@@ -72,29 +72,26 @@ class TestImageTile(unittest.TestCase):
                 self.width * self.height * self.bytes_per_pixel * 9)
                 
     def test_tile_image_has_identical_pixels(self):
-        min_multiplier = 2
-        max_multiplier = 2
+        multiplier = 2
         with Image.open(self.jpeg).convert('RGBA') as source:
             src_pixels = [[None for y in range(self.height)]
-                for x in range(self.width)]
-            for multiplier in range(min_multiplier, max_multiplier + 1):
-                self.output = imagetile.tile_image(self.jpeg, multiplier)
-                for row in range(0, multiplier):
-                    for col in range(0, multiplier):
-                        for x in range(col * self.width,
-                                (col * self.width) + self.width):
-                            for y in range(row * self.height,
-                                    (row * self.height) + self.height):
-                                out_pixel = self.output.getpixel((x, y))
-                                src_x = x - (col * self.width)
-                                src_y = y - (row * self.height)
-                                if src_pixels[src_x][src_y] is None:
-                                    src_pixel = source.getpixel((src_x,
-                                        src_y))
-                                    src_pixels[src_x][src_y] = src_pixel
-                                else:
-                                    src_pixel = src_pixels[src_x][src_y]
-                                self.assertEqual(out_pixel, src_pixel)
+                for x in range(self.width)]            
+            self.output = imagetile.tile_image(self.jpeg, multiplier)
+            for row in range(0, multiplier):
+                for col in range(0, multiplier):
+                    for x in range(col * self.width,
+                            (col * self.width) + self.width):
+                        for y in range(row * self.height,
+                                (row * self.height) + self.height):
+                            out_pixel = self.output.getpixel((x, y))
+                            src_x = x - (col * self.width)
+                            src_y = y - (row * self.height)
+                            if src_pixels[src_x][src_y] is None:
+                                src_pixel = source.getpixel((src_x, src_y))
+                                src_pixels[src_x][src_y] = src_pixel
+                            else:
+                                src_pixel = src_pixels[src_x][src_y]
+                            self.assertEqual(out_pixel, src_pixel)
 
 
 if __name__ == '__main__':
